@@ -8,7 +8,7 @@ Code will be upload soon
 - Place the files of this repository in the main directory
 - Follow the commands to run the HyGloadAttack
 
-## Attack adversarial training model
+## Attack Adversarial Training Model
 We use code from the "dne" repository https://github.com/dugu9sword/dne to implement adversarial training.
 
 ## Acknowledgement
