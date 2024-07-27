@@ -16,9 +16,6 @@ We use code from the "dne" repository https://github.com/dugu9sword/dne to imple
 ## Acknowledgement
 We thank the authors of https://github.com/RishabhMaheshwary/hard-label-attack for sharing their code.
 
-## results
-
-
 ## If you find our repository helpful, consider citing our work.
 ```
 @article{DBLP:journals/nn/LiuXLYLZX24,
