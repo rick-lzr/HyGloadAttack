@@ -319,14 +319,14 @@ def get_shortest_text(predictor,text,orig_label,batch_size,best_changed_num,text
     
 
 
-def texthoaxer_attack(
+def HyGload_attack(
             fuzz_val, top_k_words,  sample_index, text_ls,
             true_label, predictor, stop_words_set, word2idx, idx2word,
             cos_sim, sim_predictor=None, import_score_threshold=-1.,
             sim_score_threshold=0.5, sim_score_window=15, synonym_num=50,
             batch_size=32,embed_func = '',budget=1000,myargs=None):
     '''
-        texthoaxer_attack(
+        HyGload_attack(
             top_k_words, 选取topk words
             text_ls, text 真实的需要攻击的text
             true_label, 
@@ -346,7 +346,7 @@ def texthoaxer_attack(
             orig_label, torch.argmax(predictor([best_attack])), qrs, sim, random_sim
             new_text, num_changed, random_changed, \
             orig_label, new_label, num_queries, sim, random_sim
-        texthoaxer_attack(
+        HyGload_attack(
             args.fuzz, args.top_k_words, idx, text,
             true_label, predictor, stop_words_set, word2idx, idx2word,
             sim_lis , sim_predictor=use, sim_score_threshold=args.sim_score_threshold,
@@ -1233,7 +1233,7 @@ def main():
         # print(" ".join(text))
         start_time = time.time()
         new_text, num_changed, random_changed, orig_label, \
-        new_label, num_queries, sim, random_sim = texthoaxer_attack(args.fuzz,args.top_k_words,
+        new_label, num_queries, sim, random_sim = HyGload_attack(args.fuzz,args.top_k_words,
                                             idx,text, true_label, predictor, stop_words_set,
                                             word2idx, idx2word, sim_lis , sim_predictor=use,
                                             sim_score_threshold=args.sim_score_threshold,myargs=args,
